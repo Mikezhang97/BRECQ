@@ -178,11 +178,15 @@ if __name__ == '__main__':
     cnn = eval('hubconf.{}(pretrained=True)'.format(args.arch))
     cnn.cuda()
     cnn.eval()
-    print('Float model accuracy: {}'.format(validate_model(test_loader, cnn)))
+    import pdb;
+    pdb.set_trace()
+    #print('Float model accuracy: {}'.format(validate_model(test_loader, cnn)))
     # build quantization parameters
     wq_params = {'n_bits': args.n_bits_w, 'channel_wise': args.channel_wise, 'scale_method': 'mse'}
     aq_params = {'n_bits': args.n_bits_a, 'channel_wise': False, 'scale_method': 'mse', 'leaf_param': args.act_quant}
     qnn = QuantModel(model=cnn, weight_quant_params=wq_params, act_quant_params=aq_params)
+    import pdb;
+    pdb.set_trace()
     qnn.cuda()
     qnn.eval()
     if not args.disable_8bit_head_stem:
