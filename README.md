@@ -15,10 +15,6 @@ Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 | Only weights           | 71.10      | 68.800 |
 | Weights and activation | 70.00      | 68.100 |
 
-Float model accuracy: 70.70%
-Quantized accuracy before BRECQ: 54.40 %
-Weight quantization accuracy: 71.100 %
-Full quantization  accuracy: 70.0 %
 
 ## Command to run
 
