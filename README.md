@@ -1,5 +1,5 @@
 # Block Reconstruction Open Source Code for Demo
-Main idea based on this paper: https://arxiv.org/pdf/2102.05426.pdf
+Main ideas based on this paper: https://arxiv.org/pdf/2102.05426.pdf
 
 
 ## Results
@@ -7,16 +7,13 @@ Main idea based on this paper: https://arxiv.org/pdf/2102.05426.pdf
 Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 
 
-\begin{table}[]
-\begin{tabular}{|l|l|l|}
-\hline
-\%                     & \multicolumn{2}{l|}{Resnet 18} \\ \hline
-Quant                  & W4A4          & W2A4           \\ \hline
-Float                  & \multicolumn{2}{l|}{70.70}     \\ \hline
-Before BRECQ           & 54.40         & 0.200          \\ \hline
-Only weights           & 71.10         & 68.800         \\ \hline
-Weights and activation & 70.00         & 68.100         \\ \hline
-\end{tabular}
+|          %             | Resnet 18           |
+|------------------------|------------|--------|
+| Quant                  | W4A4       | W2A4   |
+| Float                  |      70.70          |
+| Before BRECQ           | 54.40      | 0.200  |
+| Only weights           | 71.10      | 68.800 |
+| Weights and activation | 70.00      | 68.100 |
 
 Float model accuracy: 70.70%
 Quantized accuracy before BRECQ: 54.40 %
