@@ -6,7 +6,7 @@ Main idea based on this paper: https://arxiv.org/pdf/2102.05426.pdf
 
 Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 
-```latex
+
 \begin{table}[]
 \begin{tabular}{|l|l|l|}
 \hline
@@ -17,8 +17,7 @@ Before BRECQ           & 54.40         & 0.200          \\ \hline
 Only weights           & 71.10         & 68.800         \\ \hline
 Weights and activation & 70.00         & 68.100         \\ \hline
 \end{tabular}
-\end{table}
-```
+
 Float model accuracy: 70.70%
 Quantized accuracy before BRECQ: 54.40 %
 Weight quantization accuracy: 71.100 %
