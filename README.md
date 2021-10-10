@@ -1,14 +1,6 @@
 # Block Reconstruction Open Source Code for Demo
 Main idea based on this paper: https://arxiv.org/pdf/2102.05426.pdf
 
-```latex
-@article{li2021brecq,
-  title={BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction},
-  author={Li, Yuhang and Gong, Ruihao and Tan, Xu and Yang, Yang and Hu, Peng and Zhang, Qi and Yu, Fengwei and Wang, Wei and Gu, Shi},
-  journal={arXiv preprint arXiv:2102.05426},
-  year={2021}
-}
-```
 
 ## Results
 
