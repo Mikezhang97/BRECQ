@@ -80,7 +80,7 @@ def accuracy(output, target, topk=(1,)):
 
 
 @torch.no_grad()
-def validate_model(val_loader, model, device=None, print_freq=100):
+def validate_model(val_loader, model, device=None, print_freq=2):
     if device is None:
         device = next(model.parameters()).device
     else:
@@ -130,7 +130,7 @@ def get_train_samples(train_loader, num_samples):
     return torch.cat(train_data, dim=0)[:num_samples]
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  
 
     parser = argparse.ArgumentParser(description='running parameters',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -174,9 +174,11 @@ if __name__ == '__main__':
                                                     data_path=args.data_path)
 
     # load model
+    
     cnn = eval('hubconf.{}(pretrained=True)'.format(args.arch))
     cnn.cuda()
     cnn.eval()
+    print('Float model accuracy: {}'.format(validate_model(test_loader, cnn)))
     # build quantization parameters
     wq_params = {'n_bits': args.n_bits_w, 'channel_wise': args.channel_wise, 'scale_method': 'mse'}
     aq_params = {'n_bits': args.n_bits_a, 'channel_wise': False, 'scale_method': 'mse', 'leaf_param': args.act_quant}

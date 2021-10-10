@@ -1,5 +1,5 @@
-# BRECQ
-Pytorch implementation of BRECQ, ICLR 2021
+# Block Reconstruction Open Source Code for Demo
+Main idea based on this paper: https://arxiv.org/pdf/2102.05426.pdf
 
 ```latex
 @article{li2021brecq,
@@ -10,43 +10,32 @@ Pytorch implementation of BRECQ, ICLR 2021
 }
 ```
 
+## Results
 
+Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 
-## Pretrained models
+Float model accuracy: 70.70%
+Quantized accuracy before BRECQ: 54.40 %
+Weight quantization accuracy: 71.100 %
+Full quantization  accuracy: 70.0 %
 
-We provide all the pretrained models and they can be accessed via  ```torch.hub```
-
-For example: use ```res18 = torch.hub.load('yhhhli/BRECQ', model='resnet18', pretrained=True)``` to get the pretrained ResNet-18 model.
-
-If you encounter URLError when downloading the pretrained network,  it's probably a network failure. 
-An alternative way is to use wget to manually download the file,  then move it to `~/.cache/torch/checkpoints`, where the ```load_state_dict_from_url``` function will check before downloading it. 
-
-For example:
+## Command to run
 
 ```bash
-wget https://github.com/yhhhli/BRECQ/releases/download/v1.0/resnet50_imagenet.pth.tar 
-mv resnet50_imagenet.pth.tar ~/.cache/torch/checkpoints
+python main_imagenet.py --data_path PATN/TO/DATA --arch resnet18 --n_bits_w 4 --channel_wise --n_bits_a 4 --act_quant --test_before_calibration
 ```
+## Environment
 
-## Usage
+RTX A6000 GPU from Lambda https://lambdalabs.com/
 
+Encountering issues: 
 ```bash
-python main_imagenet.py --data_path PATN/TO/DATA --arch resnet18 --n_bits_w 2 --channel_wise --n_bits_a 4 --act_quant --test_before_calibration
+RTX A6000 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
 ```
-
-You can get the following output:
-
+Solution:
 ```bash
-Quantized accuracy before brecq: 0.13599999248981476
-Weight quantization accuracy: 66.32799530029297
-Full quantization (W2A4) accuracy: 65.21199798583984
+>>> torch.__version__
+'1.11.0.dev20211009+cu111'
+>>> tv.__version__
+'0.12.0.dev20211009+cu111'
 ```
-
-MobileNetV2 Quantization:
-
-```bash
-python main_imagenet.py --data_path PATN/TO/DATA --arch mobilenetv2 --n_bits_w 2 --channel_wise --weight 0.1
-```
-
-Results: `Weight quantization accuracy: 59.48799896240234`
-

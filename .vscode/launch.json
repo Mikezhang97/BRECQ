@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: main_imagenet.py",
+            "type": "python",
+            "request": "launch"
+        }
+    ],
+    
+    "args":["data_path", "~/Imagenet",
+         "arch", "resnet18",
+         "n_bits_w", "4",
+          "channel_wise",
+          "n_bits_a", "4",
+          "act_quant",
+          "test_before_calibration"]
+}
