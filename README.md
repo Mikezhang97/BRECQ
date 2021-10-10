@@ -7,10 +7,10 @@ Main ideas based on this paper: https://arxiv.org/pdf/2102.05426.pdf
 Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 
 
-|          %             | Resnet 18           |
+|          %             | Resnet 18  |        |
 |------------------------|------------|--------|
 | Quant                  | W4A4       | W2A4   |
-| Float                  |      70.70          |
+| Float                  |      70.70 |        |
 | Before BRECQ           | 54.40      | 0.200  |
 | Only weights           | 71.10      | 68.800 |
 | Weights and activation | 70.00      | 68.100 |
