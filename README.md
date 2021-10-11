@@ -1,6 +1,8 @@
 # Block Reconstruction Open Source Code for Demo
 Main ideas based on this paper: https://arxiv.org/pdf/2102.05426.pdf
 
+Original work requires confidentiality by Xilinx, Inc.
+![alt text](https://github.com/Mikezhang97/BRECQ/blob/[master/xilinx-logo-full-color_(1).jpeg?raw=true)
 
 ## Results
 
