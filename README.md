@@ -13,9 +13,9 @@ python main_imagenet.py --data_path PATN/TO/DATA --arch resnet18 --n_bits_w 4 --
 
 ## Results
 
-Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
+Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model.
 
-```{=html}
+```html
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
