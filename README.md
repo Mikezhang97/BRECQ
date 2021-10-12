@@ -17,17 +17,17 @@ Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 
 ```{=latex}
 
-\begin{table}[]
-\begin{tabular}{|l|l|l|}
-\hline
-\%                     & Resnet 18 &        \\ \hline
-Quant                  & W4A4      & W2A4   \\ \hline
-Float                  & 70.70     &        \\ \hline
-Before BRECQ           & 54.40     & 0.200  \\ \hline
-Only weights           & 71.10     & 68.800 \\ \hline
-Weights and activation & 70.00     & 68.100 \\ \hline
-\end{tabular}
-\end{table}  
+        \begin{table}[]
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \%                     & Resnet 18 &        \\ \hline
+        Quant                  & W4A4      & W2A4   \\ \hline
+        Float                  & 70.70     &        \\ \hline
+        Before BRECQ           & 54.40     & 0.200  \\ \hline
+        Only weights           & 71.10     & 68.800 \\ \hline
+        Weights and activation & 70.00     & 68.100 \\ \hline
+        \end{tabular}
+        \end{table}  
 
 ```
 
