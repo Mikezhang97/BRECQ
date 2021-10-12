@@ -9,16 +9,13 @@ python main_imagenet.py --data_path PATN/TO/DATA --arch resnet18 --n_bits_w 4 --
 ```
 ## Running Demo
 
-![grab-landing-page](https://github.com/mike-zyz/BRECQ/Pictures/ezgif.com-gif-maker.gif)
+![Demo GIF](https://github.com/mike-zyz/BRECQ/blob/main/Pictures/ezgif.com-gif-maker.gif)
 
 ## Results
 
 Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 
 ```{=latex}
-
-         [PUT LATEX HERE]      
-```
 
 \begin{table}[]
 \begin{tabular}{|l|l|l|}
@@ -30,7 +27,9 @@ Before BRECQ           & 54.40     & 0.200  \\ \hline
 Only weights           & 71.10     & 68.800 \\ \hline
 Weights and activation & 70.00     & 68.100 \\ \hline
 \end{tabular}
-\end{table}
+\end{table}  
+
+```
 
 
 ## Environment
