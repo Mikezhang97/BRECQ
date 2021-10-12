@@ -15,19 +15,50 @@ python main_imagenet.py --data_path PATN/TO/DATA --arch resnet18 --n_bits_w 4 --
 
 Using only the validation set for calibration, ResNet 18 (W4A4) pretrained model
 
-```{=latex}
+```{=html}
 
-        \begin{table}[]
-        \begin{tabular}{|l|l|l|}
-        \hline
-        \%                     & Resnet 18 &        \\ \hline
-        Quant                  & W4A4      & W2A4   \\ \hline
-        Float                  & 70.70     &        \\ \hline
-        Before BRECQ           & 54.40     & 0.200  \\ \hline
-        Only weights           & 71.10     & 68.800 \\ \hline
-        Weights and activation & 70.00     & 68.100 \\ \hline
-        \end{tabular}
-        \end{table}  
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%</th>
+    <th class="tg-0pky" colspan="2">Resnet 18</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Quant</td>
+    <td class="tg-0pky">W4A4</td>
+    <td class="tg-0pky">W2A4</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Float</td>
+    <td class="tg-0pky" colspan="2">     70.70</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Before BRECQ</td>
+    <td class="tg-0pky">54.40</td>
+    <td class="tg-0pky">0.200</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Only weights</td>
+    <td class="tg-0pky">71.10</td>
+    <td class="tg-0pky">68.800</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Weights and activation</td>
+    <td class="tg-0pky">70.00</td>
+    <td class="tg-0pky">68.100</td>
+  </tr>
+</tbody>
+</table> 
 
 ```
 
